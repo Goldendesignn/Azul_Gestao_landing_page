@@ -424,6 +424,98 @@ main {
   font-weight: 650;
 }
 
+.modules-showcase {
+  margin: 12px 0 82px;
+  padding: 62px 54px;
+  border: 1px solid rgba(11,79,216,.16);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(5,119,255,.16) 0 130px, transparent 132px),
+    radial-gradient(circle at 88% 12%, rgba(11,79,216,.12) 0 180px, transparent 182px),
+    linear-gradient(180deg, #ffffff, #eef6ff);
+  box-shadow: 0 26px 80px rgba(11,79,216,.1);
+}
+
+.modules-head {
+  max-width: 790px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.modules-head h2 {
+  margin: 18px 0;
+  font-size: clamp(36px, 4.8vw, 64px);
+  line-height: .95;
+  letter-spacing: -.04em;
+  font-weight: 900;
+}
+
+.modules-head p {
+  margin: 0 auto;
+  max-width: 720px;
+  color: #41506a;
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 700;
+}
+
+.module-builder {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.module-builder article {
+  min-height: 210px;
+  padding: 22px;
+  border: 1px solid rgba(11,79,216,.14);
+  border-radius: 22px;
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 16px 42px rgba(16,21,34,.06);
+}
+
+.module-builder article:nth-child(1),
+.module-builder article:nth-child(4),
+.module-builder article:nth-child(6) {
+  background: linear-gradient(145deg, #0b4fd8, #0577ff);
+  color: #fff;
+  border-color: transparent;
+}
+
+.module-builder span {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--blue) 12%, #fff);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.module-builder article:nth-child(1) span,
+.module-builder article:nth-child(4) span,
+.module-builder article:nth-child(6) span {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+}
+
+.module-builder h3 {
+  margin: 18px 0 10px;
+  font-size: 22px;
+  line-height: 1.05;
+}
+
+.module-builder p {
+  margin: 0;
+  color: currentColor;
+  opacity: .72;
+  line-height: 1.62;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: 1.15fr repeat(3, 1fr);
@@ -850,8 +942,13 @@ details p {
 
   .feature-grid,
   .pricing-grid,
-  .testimonial-row {
+  .testimonial-row,
+  .module-builder {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .modules-showcase {
+    padding: 44px 28px;
   }
 
   .steps-band {
@@ -966,8 +1063,19 @@ details p {
 
   .feature-grid,
   .pricing-grid,
-  .testimonial-row {
+  .testimonial-row,
+  .module-builder {
     grid-template-columns: 1fr;
+  }
+
+  .modules-showcase {
+    margin-bottom: 54px;
+    padding: 34px 18px;
+    border-radius: 24px;
+  }
+
+  .modules-head {
+    text-align: left;
   }
 
   .price-card.featured {
