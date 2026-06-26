@@ -727,6 +727,27 @@ details p {
   font-weight: 700;
 }
 
+.story-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0;
+}
+
+.story-modules span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgba(11,79,216,.22);
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 10px 28px rgba(11,79,216,.08);
+}
+
 .cta {
   margin: 0 -40px 72px;
   padding: 70px 40px;
