@@ -661,6 +661,8 @@ main {
 
 .price-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -684,26 +686,75 @@ main {
 }
 
 .price-card h3 {
+  min-height: 58px;
   font-size: 24px;
+  line-height: 1.12;
 }
 
 .price-card strong {
   display: block;
-  margin: 18px 0;
+  margin: 12px 0 16px;
   font-size: 30px;
+}
+
+.plan-fit {
+  display: block;
+  min-height: 72px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 750;
+}
+
+.price-card.featured .plan-fit {
+  color: rgba(255,255,255,.7);
 }
 
 .price-card ul {
   padding: 0;
-  margin: 22px 0;
+  margin: 22px 0 18px;
   list-style: none;
 }
 
 .price-card li {
-  padding: 10px 0;
+  position: relative;
+  padding: 10px 0 10px 24px;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
   color: color-mix(in srgb, currentColor 74%, transparent);
   font-weight: 700;
+}
+
+.price-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px rgba(11,79,216,.1);
+}
+
+.price-card.featured li::before {
+  background: #8ec0ff;
+  box-shadow: 0 0 0 4px rgba(142,192,255,.16);
+}
+
+.plan-note {
+  margin: auto 0 20px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(11,79,216,.08);
+  color: #244069;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 850;
+}
+
+.price-card.featured .plan-note {
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.86);
 }
 
 .badge {
