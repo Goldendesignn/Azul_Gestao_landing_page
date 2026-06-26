@@ -691,6 +691,42 @@ details p {
   font-weight: 650;
 }
 
+.story {
+  display: grid;
+  grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
+  gap: 52px;
+  align-items: start;
+  margin: 0 0 76px;
+  padding: 46px;
+  border: 1px solid rgba(11,79,216,.18);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(5,119,255,.18) 0 120px, transparent 122px),
+    linear-gradient(135deg, #ffffff, #edf5ff);
+  box-shadow: 0 22px 70px rgba(11,79,216,.1);
+}
+
+.story h2 {
+  margin: 18px 0 0;
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: .96;
+  letter-spacing: -.035em;
+  font-weight: 900;
+}
+
+.story-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.story-copy p {
+  margin: 0;
+  color: #334057;
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 700;
+}
+
 .cta {
   margin: 0 -40px 72px;
   padding: 70px 40px;
@@ -778,6 +814,7 @@ details p {
 
   .hero,
   .section,
+  .story,
   .steps-band {
     grid-template-columns: 1fr;
   }
@@ -799,6 +836,11 @@ details p {
   .steps-band {
     margin: 0 -28px;
     padding: 58px 28px;
+  }
+
+  .story {
+    padding: 34px 28px;
+    gap: 24px;
   }
 
   .partner-row {
